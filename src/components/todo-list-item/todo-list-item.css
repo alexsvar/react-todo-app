@@ -8,7 +8,7 @@
 }
 
 .todo-list-item-label {
-  margin-left: 1.25rem;
+  margin-left: 0;
   line-height: 35px;
   cursor: pointer;
   user-select: none;
@@ -20,5 +20,5 @@
 
 .todo-list-item.important .todo-list-item-label {
   font-weight: bold;
-  color: steelblue;
+  color: #28a745;
 }

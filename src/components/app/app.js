@@ -22,6 +22,7 @@ export default class App extends Component {
   }
 
   createTodoItem(label) {
+
     return {
       label,
       important: false,
@@ -37,6 +38,7 @@ export default class App extends Component {
         ...todoData,
         newItem
       ]
+
       return {
         todoData: newArr
       }
@@ -61,6 +63,7 @@ export default class App extends Component {
     const index = arr.findIndex(el => el.id === id)
     const oldItem = arr[index]
     const newItem = {...oldItem, [propName]: !oldItem[propName]}
+
     return [
       ...arr.slice(0, index),
       newItem,
@@ -70,7 +73,8 @@ export default class App extends Component {
 
   onToggleDone = id => {
     this.setState(({todoData}) => {
-       return {
+
+      return {
         todoData: this.toggleProperty(todoData, id, 'done')
       }
     })
@@ -78,6 +82,7 @@ export default class App extends Component {
 
   onToggleImportant = id => {
     this.setState(({todoData}) => {
+
       return {
         todoData: this.toggleProperty(todoData, id, 'important')
       }
